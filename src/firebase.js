@@ -5,12 +5,12 @@ import { getStorage } from "firebase/storage";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyAg1Nn5yd-4x5v6OiI8ppYd5wCqXS7iFj0",
-  authDomain: "shecure-de8f7.firebaseapp.com",
-  projectId: "shecure-de8f7",
-  storageBucket: "shecure-de8f7.firebasestorage.app",
-  messagingSenderId: "704129366963",
-  appId: "1:704129366963:web:82b54c81af9f8980f129c6",
+  apiKey: "your api key",
+  authDomain: "shecure-xxxx.firebaseapp.com",
+  projectId: "shecure-xxxx",
+  storageBucket: "shecure-xxxx.firebasestorage.app",
+  messagingSenderId: "your ID",
+  appId: "your ID",
 };
 
 // Initialize Firebase
