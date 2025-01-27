@@ -89,7 +89,7 @@ const NearHospital = () => {
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
-					bootstrapURLKeys={{ key: "AIzaSyC1mpaHajUPWU696t2u2xboKThZC-lRnnA" }}
+					bootstrapURLKeys={{ key: "" }}
 					defaultCenter={defaultProps.center}
 					defaultZoom={defaultProps.zoom}
 				></GoogleMapReact>
