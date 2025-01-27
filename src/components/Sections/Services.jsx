@@ -24,33 +24,24 @@ export default function Services() {
 					<HeaderInfo>
 						<h1 className="font40 extraBold">Our Helpful Services</h1>
 						<p className="font13">
-							We are stand out as an integrated platform to provide healthcare
-							solutions for deprived and helpless women around the world
-							<br />
-							Our platform can be used in several cases and can impact lives of
-							several young girls.
+						"We're here to provide women with a comprehensive platform that supports their health, safety, and well-being.<br></br> SheCure offers tools like a period tracker, Law Bot for legal advice, a harassment reporting system, and easy access to nearby pharmacies and hospitals — all in one place, empowering women to take control of their health and safety."
 						</p>
 					</HeaderInfo>
 					<ServiceBoxRow className="flex">
 						<ServiceBoxWrapper>
 							<ServiceBox
-								icon="roller"
-								title="Blogs on Health & Hygiene"
-								subtitle="Menstrual hygiene is still not discussed openly and many of us feel shy to talk about it, So learn about it from out blogs.You can also contribute your blogs. Check out blogs for more."
-							/>
-						</ServiceBoxWrapper>
-						<ServiceBoxWrapper>
-							<ServiceBox
 								icon="monitor"
-								title="Mood and Cycle tracker"
+								title="Menstrual Cycle tracker"
 								subtitle="Cycle Tracker provides your 3 month predicted period cycle, So that you can prepare for your period earlier! We provide you a mood analysis and try to control your mood swings by diverting you to memes and jokes. "
 							/>
 						</ServiceBoxWrapper>
+						
+						
 						<ServiceBoxWrapper>
 							<ServiceBox
-								icon="browser"
-								title="Get Notified"
-								subtitle="Sometimes we skip our meals , yoga classes or forget drinking water. Here our notifier will send you emails so that you get prior notifications about the them."
+								icon="shield-exclamation"
+								title="Harassment Report"
+								subtitle="We use this Harassment Report feature lets women confidentially report harassment, ensuring a safe platform to seek help and take legal action."
 							/>
 						</ServiceBoxWrapper>
 						<ServiceBoxWrapper>
@@ -60,7 +51,17 @@ export default function Services() {
 								subtitle="We use google maps to get the gynaecologist's location incase of severe period pain or other problems. Select the nearest gynae location and book an appointment with a form."
 							/>
 						</ServiceBoxWrapper>
-					</ServiceBoxRow>
+
+						<ServiceBoxWrapper>
+							<ServiceBox
+								icon="bi-clipboard"
+								title="Law Bot"
+								subtitle="We use this bot provides accessible legal advice, helping women understand their rights and take action. Available 24/7, it supports them in cases like harassment and violence."
+							/>
+						</ServiceBoxWrapper>
+
+						
+						</ServiceBoxRow>
 				</div>
 				<div className="lightBg">
 					<div className="container">
@@ -84,11 +85,7 @@ export default function Services() {
 											<FullButton title="Share the world" />
 										</Link>
 									</div>
-									<div style={{ width: "190px", marginLeft: "15px" }}>
-										<Link to= "/contact">
-											<FullButton title="Share only to Us" border />
-										</Link>
-									</div>
+									
 								</ButtonsRow>
 							</AddLeft>
 							<AddRight>

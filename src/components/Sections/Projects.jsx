@@ -31,7 +31,7 @@ export default function Projects() {
 					</HeaderInfo>
 					<div className="row textCenter">
 						<div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<Link to={"/appointment"}>
+							<Link to={"/login"}>
 								<ProjectBox
 									img={
 										"https://previews.123rf.com/images/artinspiring/artinspiring2003/artinspiring200300513/142303595-young-woman-have-in-vitro-fertilization-treatment-in-fertility-clinic-gynecologist-doctor-take-a-wom.jpg"
@@ -42,7 +42,7 @@ export default function Projects() {
 							</Link>
 						</div>
 						<div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<Link to={"/"}>
+							<Link to={"/login"}>
 								<ProjectBox
 									img={
 										"https://img.freepik.com/free-vector/feminine-hygiene-products_23-2148658416.jpg?w=740&t=st=1673089781~exp=1673090381~hmac=43f454c7e68293446a5009ad018440a2ca8d45114ccc712873fd84b75570af43"
@@ -53,7 +53,7 @@ export default function Projects() {
 							</Link>
 						</div>
 						<div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<Link to={"/track"}>
+							<Link to={"/login"}>
 								<ProjectBox
 									img={
 										"https://img.freepik.com/free-vector/creative-menstrual-calendar-concept-illustrated_23-2148662282.jpg?w=740&t=st=1673051551~exp=1673052151~hmac=cc8dc3c63a9c7145f0fb7e473fb5ccd6ecd8692f5a841a58c8dedd9a689d9db7"
@@ -64,13 +64,13 @@ export default function Projects() {
 							</Link>
 						</div>
 						<div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<Link to={"/signup"}>
+							<Link to={"/login"}>
 								<ProjectBox
 									img={
 										"https://img.freepik.com/free-vector/messaging-fun-concept-illustration_114360-1563.jpg?t=st=1673089953~exp=1673090553~hmac=bc161ad549e1ec1594195cc081b58200698d41165d0ab281e5b3a4c2e0262395"
 									}
-									title="Mood Tracker"
-									text="Get an complete details of your period cycles, mood swings , diet chart and sleep cycle "
+									title="Diet Plan"
+									text="Health is Wealth!"
 								/>
 							</Link>
 						</div>

@@ -10,7 +10,7 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-export default function Blog() {
+/*export default function Blog() {
 	const [data, setdata] = useState([]);
 	const [idi, setidi] = useState([]);
 	const getData = async () => {
@@ -78,7 +78,7 @@ export default function Blog() {
 								tag="company"
 								author="Luke Skywalker, 2 days ago"
 							/>
-						</div> */}
+						</div> 
 					</div>
 					{/* <div className="row textCenter">
 						<div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -105,9 +105,9 @@ export default function Blog() {
 								author="Luke Skywalker, 2 days ago"
 							/>
 						</div>
-					</div> */}
+					</div> }
 				</div>
-			</div>
+			</div>*/
 			<div className="lightBg" style={{ padding: "50px 0" }}>
 				<div className="container">
 					<HeaderInfo>
@@ -121,9 +121,9 @@ export default function Blog() {
 					<TestimonialSlider />
 				</div>
 			</div>
-		</Wrapper>
-	);
-}
+		//</Wrapper>
+	;
+
 
 const Wrapper = styled.section`
 	width: 100%;
@@ -135,3 +135,4 @@ const HeaderInfo = styled.div`
 		text-align: center;
 	}
 `;
+*/

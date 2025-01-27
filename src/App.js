@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Screens
@@ -10,14 +10,38 @@ import SignUp from "./components/login/signUp.jsx";
 import Login from "./components/login/Login.jsx";
 import UserForm from "./components/Appointment/UserForm.js";
 import BlogForm from "./components/Appointment/Blog_Form.js";
-import Blog from "./components/Blog/Blog.jsx";
+import Blog from "./components/Blog/Blog.js";
 import BlogShow from "./components/BlogShow/BlogShow.jsx";
 import DashboardBlogCard from "./components/Sections/DashboardBlogCard.jsx";
 import NearClinic from "./components/nearestClinic/nearestClinic.jsx";
 import NearHospital from "./components/nearestHospital/nearestHospital.jsx";
 import MoodyBot from "./components/moodyBot.jsx";
+import Harassform from "./components/harassform/harassform.js";
+import WakeUpHelp from './components/WakeUpHelp/WakeUpHelp.js';
+import Diet from './components/diet/diet.jsx';
+import DoctorDashboard from './components/doctor/DoctorDashboard'; // Adjust path as needed
+import NGODashboard from './components/ngo/NGODashboard';
 
 export default function App() {
+	const [userType, setUserType] = useState(null);
+
+  useEffect(() => {
+    // Check user type from localStorage
+    const storedUserType = localStorage.getItem("userType");
+    setUserType(storedUserType);
+  }, []);
+
+  // Navigate based on user type
+  const renderRoutes = () => {
+    if (userType === "doctor") {
+      return <Navigate to="/doctor-dashboard" />;
+    } else if (userType === "ngo") {
+      return <Navigate to="/ngo-dashboard" />;
+    } else if (userType === "normal") {
+      return <Navigate to="/dashboard" />;
+    }
+    return <Navigate to="/" />;
+  };
 	return (
 		<>
 			<Helmet>
@@ -27,7 +51,7 @@ export default function App() {
 					href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap"
 					rel="stylesheet"
 				/>
-				<title>Shewin | We Care She Wins</title>
+				<title>Shecure</title>
 			</Helmet>
 			<BrowserRouter>
 				<Routes>
@@ -45,6 +69,11 @@ export default function App() {
 					<Route path="/nearclinic" element={<NearClinic />} />
 					<Route path="/nearhospital" element={<NearHospital />} />
 					<Route path="/moodybot" element={<MoodyBot />} />
+					<Route path="/harassform" element={<Harassform />} />
+					<Route path="/WakeUpHelp" element={<WakeUpHelp />} />
+					<Route path="/Diet" element={<Diet />} />
+                    <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+		  			<Route path="/ngo-dashboard" element={<NGODashboard />} />
 				</Routes>
 			</BrowserRouter>
 		</>

@@ -1,92 +1,101 @@
 import React, { useState } from "react";
-import "./SignUp.css";
-import { FaGoogle } from "react-icons/fa";
-import {
-	signInWithPopup,
-	GoogleAuthProvider,
-	signInWithEmailAndPassword,
-} from "firebase/auth";
-import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
+import { auth, db } from "../../firebase";
+import { FaGoogle } from "react-icons/fa";
+import "./SignUp.css";
 
 const Login = () => {
-	const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-	const googleLogin = () => {
-		const provider = new GoogleAuthProvider();
-		signInWithPopup(auth, provider)
-			.then((result) => {
-				// This gives you a Google Access Token. You can use it to access the Google API.
-				const credential = GoogleAuthProvider.credentialFromResult(result);
-				const token = credential.accessToken;
-				// The signed-in user info.
-				const user = result.user;
-				navigate("/dashboard");
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-				// ...
-			})
-			.catch((error) => {
-				// Handle Errors here.
-				const errorCode = error.code;
-				const errorMessage = error.message;
-				// The email of the user's account used.
-				const email = error.customData.email;
-				// The AuthCredential type that was used.
-				const credential = GoogleAuthProvider.credentialFromError(error);
-				// ...
-			});
-	};
-	const [email, setemail] = useState("");
-	const [password, setpassword] = useState("");
+    try {
+      // Sign in the user
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
 
-	const EmailLogin = () => {
-		signInWithEmailAndPassword(auth, email, password)
-			.then((userCredential) => {
-				// Signed in
-				const user = userCredential.user;
-				navigate("/dashboard")
-				// ...
-			})
-			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
-			});
-	};
-	return (
-		<div className="bg">
-			<div className="signup">
-				<div className="signup-connect">
-					<h1 style={{ color: "#E73B91" }}>Login with Google</h1>
-					<a href="#" className="btn btn-google" onClick={googleLogin}>
-						<FaGoogle style={{ marginRight: "10px" }} /> Sign in with Google
-					</a>
-				</div>
-				<div className="signup-classic">
-					<h2 style={{ fontWeight: "600", fontSize: "25px" }}>Login</h2>
-					<div className="form">
-						<fieldset className="email">
-							<input
-								type="email"
-								onChange={(e) => setemail(e.target.value)}
-								style={{ color: "black" }}
-								placeholder="email"
-							/>
-						</fieldset>
-						<fieldset className="password">
-							<input
-								type="password"
-								placeholder="password"
-								onChange={(e) => setpassword(e.target.value)}
-							/>
-						</fieldset>
-						<button className="btn" onClick={EmailLogin}>
-							Login
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+      // Fetch the userType from Firestore
+      const userDoc = await getDoc(doc(db, "users", user.uid));
+      if (userDoc.exists()) {
+        const userType = userDoc.data().userType;
+
+        // Navigate based on userType
+        if (userType === "doctor") {
+          navigate("/doctor-dashboard");
+        } else if (userType === "ngo") {
+          navigate("/ngo-dashboard");
+        } else {
+          navigate("/dashboard");
+        }
+      } else {
+        throw new Error("User data not found in Firestore");
+      }
+    } catch (error) {
+      setError(error.message); // Set error message if login fails
+      console.error(error.message);
+    }
+  };
+
+  const googleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const user = result.user;
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        console.error("Google Login Error:", error.message);
+      });
+  };
+
+  return (
+    <div className="bg">
+      <div className="signup">
+        <div className="signup-connect">
+          <h1 style={{ color: "#E73B91" }}>Login with Google</h1>
+          <button className="btn btn-google" onClick={googleLogin}>
+            <FaGoogle style={{ marginRight: "10px" }} /> Sign in with Google
+          </button>
+        </div>
+        <div className="signup-classic">
+          <h2 style={{ fontWeight: "600", fontSize: "25px" }}>Login</h2>
+          {error && <p className="error">{error}</p>}
+          <form className="form" onSubmit={handleLogin}>
+            <fieldset className="email">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{ color: "black" }}
+                placeholder="Enter your email"
+                required
+              />
+            </fieldset>
+            <fieldset className="password">
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                required
+              />
+            </fieldset>
+            <button className="btn" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Login;

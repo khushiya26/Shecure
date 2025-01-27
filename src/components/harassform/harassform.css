@@ -1,0 +1,226 @@
+/* HarassmentForm.css */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #edafaf;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/1500'); /* Replace with your desired background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  h2 {
+    text-align: center;
+    color: rgb(80, 68, 68);
+    margin-bottom: 30px;
+  }
+  
+  .harassment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .contact-method label {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .contact-method input {
+    margin-right: 10px;
+    color:#333;
+  }
+  
+  .auto-location-btn {
+    margin-top: 10px;
+    background-color: #050505;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auto-location-btn:hover {
+    background-color: #837b7d;
+  }
+  
+  .yes-no-btns button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .yes-no-btns button.active {
+    background-color: #121212;
+  }
+  
+  .yes-no-btns button:hover {
+    background-color: #555;
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #fdfdfd;
+  }
+  
+  /* Hide the default checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000; /* Border color */
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    background-color: white;
+  }
+  
+  /* Style the checkbox when it is checked */
+  input[type="checkbox"]:checked::after {
+    content: ""; 
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 10px;
+    height: 15px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotate(-45deg);
+  }
+  
+  /* Add hover effect for better UI */
+  input[type="checkbox"]:hover {
+    border-color: #333;
+  }
+  
+  /* You can also add a focus effect to improve accessibility */
+  input[type="checkbox"]:focus {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  /* Hide the default radio button */
+input[type="radio"] {
+    appearance: none; /* Remove default radio button style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000; /* Border color */
+    border-radius: 50%; /* Round shape */
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Create the custom circle */
+  input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black; /* Black color for the checkmark */
+  }
+  
+  /* Change border color on hover */
+  input[type="radio"]:hover {
+    border-color: #333;
+  }
+  
+  /* Focus effect for accessibility */
+  input[type="radio"]:focus {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styling for the label text */
+  .contact-method label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Optional: Add some space between the radio buttons */
+  .contact-method label {
+    margin-right: 15px;
+  }
+  
+  /* Styling the entire form container */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #b00073;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #555;
+  }
+  

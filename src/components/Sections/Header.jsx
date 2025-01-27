@@ -12,15 +12,14 @@ export default function Header() {
 	return (
 		<Wrapper id="home" className="container flexSpaceCenter">
 			<LeftSide className="flexCenter">
-				<div>
+			<div>
 					<h1 className="extraBold font60">
 						We Care, <br /> She Wins
 					</h1>
 					<HeaderP className="font13 semiBold">
-						We here provide healthcare solutions to women. We cover blogs on
-						reproductive health, vaginal Health and hygiene. Our Web app
-						provides a proper menstrual hygiene management which can reduce
-						school dropout and increase women empowerment
+					Our platform supports women’s health with a period tracker, nearby pharmacies, hospitals, diet plans, 
+					and appointment bookings for physical well-being. For mental health, we offer a law bot for legal advice and 
+					harassment reporting forms, connecting users to NGOs for support, empowering women with both healthcare and legal resources.
 					</HeaderP>
 					<BtnWrapper>
 						<Link to={"/signup"}>
@@ -34,7 +33,7 @@ export default function Header() {
 					<Img
 						className="radius8"
 						src={
-							"https://user-images.githubusercontent.com/73426684/211127930-04c39bb4-df72-4b1b-aa72-358275b49f39.png"
+							"\women.jpeg"
 						}
 						alt="office"
 						style={{ zIndex: 9 }}
@@ -67,6 +66,7 @@ export default function Header() {
 	);
 }
 
+
 const Wrapper = styled.section`
 	padding-top: 80px;
 	width: 100%;
@@ -97,6 +97,16 @@ const RightSide = styled.div`
 		margin-top: 30px;
 	}
 `;
+
+const Heading = styled.h1`
+ 	 transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    font-color: black;
+    &:hover {
+    transform: scale(1.1); 
+  }
+`;
+
 const HeaderP = styled.div`
 	max-width: 470px;
 	padding: 15px 0 50px 0;
@@ -125,6 +135,8 @@ const GreyDiv = styled.div`
 	}
 `;
 const ImageWrapper = styled.div`
+
+
 	display: flex;
 	justify-content: flex-end;
 	position: relative;
@@ -135,6 +147,12 @@ const ImageWrapper = styled.div`
 	}
 `;
 const Img = styled.img`
+	transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1); 
+  }
+
 	@media (max-width: 560px) {
 		width: 80%;
 		height: auto;
@@ -170,4 +188,16 @@ const DotsWrapper = styled.div`
 	@media (max-width: 560px) {
 		display: none;
 	}
+`;
+
+const QuoteText = styled.p`
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1); 
+  }
+  font-size: 15px; 
+  color: white; 
+  em {
+    font-style: italic; 
+  }
 `;

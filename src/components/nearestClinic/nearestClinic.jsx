@@ -76,15 +76,7 @@ const NearClinic = () => {
 			</div> */}
 
 			{/* <!-- Banner --> */}
-			<a
-				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
-				target={"_blank"}
-				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
-				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
-			>
-				<strong>Heya Shewinner : : </strong> Let's contribute to the community
-				donate now →
-			</a>
+			
 
 			{/* <!-- Dashboard --> */}
 			<div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
@@ -165,12 +157,8 @@ const NearClinic = () => {
 									<Link to="/track" className="dropdown-item">
 										Period Tracker
 									</Link>
-									<Link to="/moodtracker" className="dropdown-item">
-										Mood Tracker
-									</Link>
-									<Link to="/blogform" className="dropdown-item">
-										BLogs
-									</Link>
+									
+									
 									<Link to="/profile" className="dropdown-item">
 										Profile
 									</Link>
@@ -194,19 +182,8 @@ const NearClinic = () => {
 										<i className="bi bi-house"></i> Home
 									</Link>
 								</li>
-								<li className="nav-item">
-									<Link className="nav-link" to="/moodtracker">
-										<i className="bi bi-bar-chart"></i> Mood Tracker
-									</Link>
-								</li>
-								<li className="nav-item">
-									<Link className="nav-link" to={"/blogform"}>
-										<i className="bi bi-chat"></i> Blogs
-										<span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">
-											{size}
-										</span>
-									</Link>
-								</li>
+								
+								
 								<li className="nav-item">
 									<Link className="nav-link" to="/track">
 										<i className="bi bi-bookmarks"></i> Period Tracker
@@ -224,100 +201,14 @@ const NearClinic = () => {
 								</li>
                                 <li className="nav-item">
 									<Link className="nav-link" to={"/moodybot"}>
-										<i className="bi bi-emoji-smile"></i> Moody Bot
+										<i className="bi bi-emoji-smile"></i> Law Bot
 									</Link>
 								</li>
 							</ul>
 							{/* <!-- Divider --> */}
 							<hr className="navbar-divider my-5 opacity-20" />
 							{/* <!-- Navigation --> */}
-							<ul className="navbar-nav mb-md-4">
-								<li>
-									<div
-										onClick={() => console.log(blogs)}
-										className="nav-link text-xs font-semibold text-uppercase text-muted ls-wide"
-										href="#"
-									>
-										Gynaecologists
-										<span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-4">
-											13
-										</span>
-									</div>
-								</li>
-								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
-										<div className="me-4">
-											<div className="position-relative d-inline-block text-white">
-												<img
-													alt="Image Placeholder"
-													src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-													className="avatar rounded-circle"
-												/>
-												<span className="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-											</div>
-										</div>
-										<div>
-											<span className="d-block text-sm font-semibold">
-												Dr. Marie Claire
-											</span>
-											<span className="d-block text-xs text-muted font-regular">
-												Dr. Paris, FR
-											</span>
-										</div>
-										<div className="ms-auto">
-											<i className="bi bi-chat"></i>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
-										<div className="me-4">
-											<div className="position-relative d-inline-block text-white">
-												<span className="avatar bg-soft-warning text-warning rounded-circle">
-													JW
-												</span>
-												<span className="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-											</div>
-										</div>
-										<div>
-											<span className="d-block text-sm font-semibold">
-												Michael Jordan
-											</span>
-											<span className="d-block text-xs text-muted font-regular">
-												Bucharest, RO
-											</span>
-										</div>
-										<div className="ms-auto">
-											<i className="bi bi-chat"></i>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
-										<div className="me-4">
-											<div className="position-relative d-inline-block text-white">
-												<img
-													alt="..."
-													src="https://images.unsplash.com/photo-1610899922902-c471ae684eff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-													className="avatar rounded-circle"
-												/>
-												<span className="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-danger rounded-circle"></span>
-											</div>
-										</div>
-										<div>
-											<span className="d-block text-sm font-semibold">
-												Dr Heather Wright
-											</span>
-											<span className="d-block text-xs text-muted font-regular">
-												London, UK
-											</span>
-										</div>
-										<div className="ms-auto">
-											<i className="bi bi-chat"></i>
-										</div>
-									</a>
-								</li>
-							</ul>
+							
 							{/* <!-- Push content down --> */}
 							<div className="mt-auto"></div>
 							{/* <!-- User (md) --> */}
@@ -352,28 +243,12 @@ const NearClinic = () => {
 										<h1
 											className="h2 mb-0 ls-tight"
 											style={{ color: "#5C60F5" }}
-										>{`Hello , ${CurrentUser?.displayName?.toLowerCase()}`}</h1>
+										>{`Hello , User`}</h1>
 									</div>
 									{/* <!-- Actions --> */}
 									<div className="col-sm-6 col-12 text-sm-end">
 										<div className="mx-n1">
-											<button
-												onClick={() => setOpenModel(true)}
-												className="btn d-inline-flex btn-sm btn-primary mx-1"
-												style={{
-													background: "#F65AA8",
-													color: "white",
-													border: "none",
-												}}
-											>
-												<span className=" pe-2">
-													<i
-														className="bi bi-plus"
-														style={{ fontSize: "15px" }}
-													></i>
-												</span>
-												<span>Create Reminder</span>
-											</button>
+											
 										</div>
 									</div>
 								</div>

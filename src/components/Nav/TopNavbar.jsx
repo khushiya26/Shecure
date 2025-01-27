@@ -25,7 +25,7 @@ export default function TopNavbar() {
 					<Anc className="pointer flexNullCenter" smooth={true} to={"/"}>
 						<LogoIcon />
 						<h1 style={{ marginLeft: "3px" }} className="font20 extraBold">
-							Shewin
+							SheCure
 						</h1>
 					</Anc>
 					<BurderWrapper
@@ -51,14 +51,7 @@ export default function TopNavbar() {
 								About
 							</Link>
 						</li>
-						<li className="semiBold font15 pointer hover">
-							<Anc
-								style={{ padding: "10px 15px", color: "black" }}
-								to="/track" // changing this to projects or health services
-							>
-								Trackers
-							</Anc>
-						</li>
+						
 						{/* <li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
@@ -76,23 +69,8 @@ export default function TopNavbar() {
 								Blogs
 							</Anc>
 						</li> */}
-						<li className="semiBold font15 pointer hover">
-							<Anc
-								style={{ padding: "10px 15px", color: "black" }}
-								to="/blog" // changing this to projects or health services
-							>
-								Blogs
-							</Anc>
-						</li>
-						<li className="semiBold font15 pointer hover">
-							<a
-								style={{ padding: "10px 15px", color: "black" }}
-								target="_blank"
-								href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
-							>
-								Donate
-							</a>
-						</li>
+						
+						
 						<li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"

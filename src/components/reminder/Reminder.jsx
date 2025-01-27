@@ -13,7 +13,7 @@ import "./reminder.css";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
-const Alert = React.forwardRef(function Alert(props, ref) {
+/*const Alert = React.forwardRef(function Alert(props, ref) {
 	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
@@ -329,5 +329,5 @@ function Reminder() {
 		</Box>
 	);
 }
-
+*/
 export default Reminder;

@@ -77,7 +77,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 						smooth={true}
 						offset={-60}
 					>
-						Blog
+						Appointment
 					</Anc>
 				</li>
 				<li className="semiBold font15 pointer">

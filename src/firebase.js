@@ -1,36 +1,25 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import "firebase/compat/firestore";
-import "firebase/compat/storage";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Firebase config
 const firebaseConfig = {
-	apiKey: "AIzaSyC5uvEVrMvaEZzcO7QrV8u8oJZQXbgF6gs",
-	authDomain: "shewin-40205.firebaseapp.com",
-	projectId: "shewin-40205",
-	storageBucket: "shewin-40205.appspot.com",
-	messagingSenderId: "604340215105",
-	appId: "1:604340215105:web:082a7c4ea18084346515c0",
+  apiKey: "AIzaSyAg1Nn5yd-4x5v6OiI8ppYd5wCqXS7iFj0",
+  authDomain: "shecure-de8f7.firebaseapp.com",
+  projectId: "shecure-de8f7",
+  storageBucket: "shecure-de8f7.firebasestorage.app",
+  messagingSenderId: "704129366963",
+  appId: "1:704129366963:web:82b54c81af9f8980f129c6",
 };
 
 // Initialize Firebase
-let app;
+const app = initializeApp(firebaseConfig);
 
-if (firebase.apps.length == 0) {
-	app = firebase.initializeApp(firebaseConfig);
-} else {
-	app = firebase.app();
-}
+// Get Firebase services
+const db = getFirestore(app); // Firestore instance
+const auth = getAuth(app); // Authentication instance
+const storage = getStorage(app); // Storage instance
 
-const db = app.firestore();
-const auth = firebase.auth();
-const storage = app.storage();
-
-export { db, auth, storage };
+// Export services
+export { app, db, auth, storage };
