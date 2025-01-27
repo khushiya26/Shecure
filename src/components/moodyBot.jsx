@@ -6,7 +6,7 @@ const LawBotApp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [userInput, setUserInput] = useState(""); // State to hold input box value
 
-  const GEMINI_API_KEY = "AIzaSyBMREO4PCJMht5NxAw16JK097DOW9R3QEU";  // Replace with your API key
+  const GEMINI_API_KEY = "";  // Replace with your API key
 
   const handleGenerateResponse = async (prompt) => {
     setIsLoading(true);
